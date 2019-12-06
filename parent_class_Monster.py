@@ -3,11 +3,17 @@
 class Monster():
 
     #Monster Attributes
-    def __init__(self, name, skills = ['']):
-        self.name = name
-        self.skills = skills
+    def __init__(self, monster_name, skills = []):
+        self.__monster_name = monster_name
+        self.__skills = skills
 
     #Monster Methods
+    def get_name(self):
+        return self.__monster_name
+
     def added_skills (self, skill):
         the_monster_in_question = self
-        the_monster_in_question.skills.append(skill)
+        the_monster_in_question.__skills.append(skill)
+
+    def get_skills(self):
+        return self.__skills
