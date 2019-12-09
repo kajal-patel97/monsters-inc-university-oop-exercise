@@ -49,43 +49,46 @@ while True:
         for subject in running_workshops:
             print(subject.scary_subject)
 
-    # elif option == '3':
-    #     print('You have selected option 3 - Add student to Spooky Workshop')
-        # select student
-            # iterate over student list with index so human can decide
-                # start a counter at 0,
-                # print counter before objct name
-                # increment counter
-            # prompt user for input
-            # save studen object in variable to use later
-        # count = 0
-        # for student in student_list:
-        #     print(count, '-', student.get_name())
-        #     count += 1
-        # student_select_index = input('What student would you like to add to a workshop? (choose a number)')
-        # selected_student = student_list[int(student_select_index)]
-        #
-        # # Select workshop
-        #     # iterate over workshoo list with index so human can decide
-        #     # prompt user for input
-        #     # save workshop object in variable to use later
-        # count = 0
-        # for workshop in running_workshops:
-        #     print(workshop.get_subject())
-        #     count += 1
-        #     workshop_select_index = input('Choose a workshop to add to: (choose a number)')
-        #     selected_workshop = running_workshops[int(workshop_select_index)]
     elif option == '3':
         print('You have selected option 3 - Add student to Spooky Workshop')
-        workshop = input('Select a workshop to add a student to? ')
-        id = input('Please enter the ID of the student you want to add... ')
-
+        # select student
+        #     iterate over student list with index so human can decide
+        #         start a counter at 0,
+        #         print counter before objct name
+        #         increment counter
+        #     prompt user for input
+        #     save studen object in variable to use later
+        count = 0
         for student in student_list:
-            if id == student.get_uni_id():
-                for subject in running_workshops:
-                    if workshop == subject.scary_subject:
-                        subject.adding_student_to_workshop(student)
-                        print(f'The following student {subject.list_student_id()} has been added')
+            print(count, '-', student.get_name())
+            count += 1
+        student_select_index = input('What student would you like to add to a workshop? (choose a number)')
+        selected_student = student_list[int(student_select_index)]
+
+        # Select workshop
+            # iterate over workshoo list with index so human can decide
+            # prompt user for input
+            # save workshop object in variable to use later
+        count = 0
+        for workshop in running_workshops:
+            print(count, '-', workshop.get_subject())
+            count += 1
+        workshop_select_index = input('Choose a workshop to add to: (choose a number)')
+        selected_workshop = running_workshops[int(workshop_select_index)]
+
+        selected_workshop.adding_student_to_workshop(selected_student)
+        print('Well done Student has been added!')
+    # elif option == '3':
+    #     print('You have selected option 3 - Add student to Spooky Workshop')
+    #     workshop = input('Select a workshop to add a student to? ')
+    #     id = input('Please enter the ID of the student you want to add... ')
+    #
+    #     for student in student_list:
+    #         if id == student.get_uni_id():
+    #             for subject in running_workshops:
+    #                 if workshop == subject.scary_subject:
+    #                     subject.adding_student_to_workshop(student)
+    #                     print(f'The following student {subject.list_student_id()} has been added')
 
 
         # run method adding_student_to_workshopwith selected studen
