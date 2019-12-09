@@ -15,5 +15,12 @@ class Monster():
         the_monster_in_question = self
         the_monster_in_question.__skills.append(skill)
 
+
     def get_skills(self):
         return self.__skills
+
+    def list_of_monsters(self):
+            list_monsters = []
+            for list_monsters in self.list_of_students:
+                stu_id.extend([student.get_uni_id()])
+            return stu_id

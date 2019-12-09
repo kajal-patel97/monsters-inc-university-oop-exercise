@@ -6,8 +6,8 @@ from parent_class_Monster import  *
 class Student_Monster(Monster):
 
 # Monster Atrributes
-    def __init__(self, monster_name, skills,uni_id, grade = 'C'):
-        super().__init__(monster_name, skills)
+    def __init__(self, monster_name, uni_id, grade = 'C'):
+        super().__init__(monster_name)
         self.__uni_id = uni_id
         self.__grade = grade
 

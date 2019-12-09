@@ -18,12 +18,16 @@ class Spooky_Workshops():
         self.hall_number = hall_number
         self.list_of_students = []
 
+
+
     # methods
     def adding_student_to_workshop(self, student):
         self.list_of_students.append(student)
 
-    def list_all_subjects(self):
-        return self.scary_subject
+    def get_subject(self):
+       return self.scary_subject
+
+
 
 
 
