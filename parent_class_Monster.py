@@ -3,9 +3,9 @@
 class Monster():
 
     #Monster Attributes
-    def __init__(self, monster_name, skills = []):
+    def __init__(self, monster_name):
         self.__monster_name = monster_name
-        self.__skills = skills
+        self.__skills = []
 
     #Monster Methods
     def get_name(self):
